@@ -1,7 +1,26 @@
+# 依賴與建置產物
 node_modules/
 dist/
 .gradle/
 thomas-backend/build/
 thomas-backend/bin/
+
+# 環境變數（請勿提交金鑰）
+.env
+.env.*
+!.env.example
+
+# 文件：忽略其他 PDF，但保留 docs/ 下的專案文件
 *.pdf
+!docs/*.pdf
+
+# 編輯器與系統檔案
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+*.log
+
+# Python
+__pycache__/
+*.pyc

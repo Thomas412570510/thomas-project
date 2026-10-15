@@ -34,7 +34,8 @@ def run_git_clean():
         
     print(f"Using Git executable: {git_exe}")
     
-    repo_dir = os.path.dirname(os.path.abspath(__file__))
+    # 腳本位於 scripts/，專案根目錄為其上一層
+    repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(repo_dir)
     print(f"Working directory: {repo_dir}")
     

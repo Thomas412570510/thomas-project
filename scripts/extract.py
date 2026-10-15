@@ -167,6 +167,7 @@ def generate_pdf(base_dir, output_pdf):
     print("PDF build complete.")
 
 if __name__ == "__main__":
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    output_pdf = os.path.join(base_dir, "Thomas_Codebase.pdf")
+    # 腳本位於 scripts/，專案根目錄為其上一層；PDF 輸出至 docs/
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    output_pdf = os.path.join(base_dir, "docs", "Thomas_Codebase.pdf")
     generate_pdf(base_dir, output_pdf)
